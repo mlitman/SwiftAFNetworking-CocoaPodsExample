@@ -14,14 +14,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        let manager = AFHTTPRequestOperationManager()
+        
+        manager.GET("http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=1&appid=e425e752a1903323e671ef577cd15f28",
+            parameters: nil,
+            success: { (operation:AFHTTPRequestOperation, responseObject:AnyObject) -> Void in
+                print("Response: " + responseObject.description)
+            }) { (operation:AFHTTPRequestOperation?, error:NSError) -> Void in
+                print("Error: " + error.localizedDescription)
+        }
 
-    override func didReceiveMemoryWarning() {
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        }
     }
-
-
 }
-
