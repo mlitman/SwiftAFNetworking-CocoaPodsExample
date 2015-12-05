@@ -2,7 +2,7 @@
 //  bridge.h
 //  webServicesExample
 //
-//  Created by Eric M. Seitz on 11/30/15.
+//  Created by Michael Litman on 12/4/15.
 //  Copyright © 2015 Eric M. Seitz. All rights reserved.
 //
 
